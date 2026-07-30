@@ -37,7 +37,8 @@ const connectors = connectorsForWallets(
 const transports = {
   [mainnet.id]: fallback([
     http(
-      `https://mainnet.infura.io/v3/${import.meta.env.VITE_INFURA_ID ?? ""}`,
+      // `https://mainnet.infura.io/v3/${import.meta.env.VITE_INFURA_ID ?? ""}`,
+      `https://ethereum-mainnet.core.chainstack.com/e6392340af19309d82636d9c2576570f`,
     ),
     http(),
   ]),

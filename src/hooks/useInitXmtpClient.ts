@@ -53,7 +53,7 @@ const makePromise = <T = void>() => {
 
 // XMTP client options
 const clientOptions = {
-  apiUrl: import.meta.env.VITE_XMTP_API_URL,
+  apiUrl: "https://xmtp.skipshift.io",
   env: getEnv(),
   appVersion: getAppVersion(),
 } as Partial<ClientOptions>;
@@ -204,7 +204,7 @@ const useInitXmtpClient = () => {
                   setStatus("enabled");
 
                   keys = undefined;
-                  clientOptions.useSnaps = true;
+                  clientOptions.useSnaps = false;
                   clientOptions.preCreateIdentityCallback =
                     preCreateIdentityCallback;
                   clientOptions.preEnableIdentityCallback =

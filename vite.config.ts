@@ -8,4 +8,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["@xmtp/user-preferences-bindings-wasm"],
   },
+  server: {
+    // host: true, // Listen on all network interfaces
+  },
 });
